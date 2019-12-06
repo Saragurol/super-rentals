@@ -1,0 +1,10 @@
+{{!-- Special template used to specify a common layout that is shared by every page in the app. Great place to put site-wide UI elements like a navbar and footer --}}
+
+{{!-- This special template does not have its own URL and cannot be navigated to on its own --}}
+<div class="container">
+    <Nav-Bar></Nav-Bar>
+    <div class="body">
+        {{outlet}}
+        {{!-- outlet keyword denotes the place where the site's pages should be rendered into (similar to yield) --}}
+    </div>
+</div>
