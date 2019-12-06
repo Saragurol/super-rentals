@@ -1,4 +1,4 @@
-// Acceptance tests aka aplication tests, this tests my app from the user's perspective. They are an autmated version of the "click around and see if it works method"
+// Acceptance tests aka application tests, tests my app from the user's perspective. They are an autmated version of the "click around and see if it works method"
 
 // writing tests in framework, QUnit
 
