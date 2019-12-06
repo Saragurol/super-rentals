@@ -9,4 +9,6 @@ export default class Router extends EmberRouter {
 
 Router.map(function() {
   this.route('about');
+  this.route('contact', {path: '/getting-in-touch'});
+  // note: explicitly specified a path for the contact route
 });
