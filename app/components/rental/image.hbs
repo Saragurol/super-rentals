@@ -1,9 +1,17 @@
 {{!-- this is an example of a "namespaced" component. Allows me to organize my components by folders according to their purpose --}}
 
 {{!-- this can be invoked as <Rental::Image> --}}
-<div class="image">
-    <img ...attributes>
-    {{!-- the ...attributes keyword allows arbitrary HTML attributes to be passed in when invoking this component --}}
+{{#if this.isLarge}}
+    <div class="image large">
+        <img ...attributes>
+        {{!-- the ...attributes keyword allows arbitrary HTML attributes to be passed in when invoking this component --}}
 
-    {{!-- adding ...attribute to the primary element allows for maximum flexibility --}}
-</div>
+        {{!-- adding ...attribute to the primary element allows for maximum flexibility --}}
+        <small>View Smaller</small>
+    </div>
+    {{else}}
+    <div class="image">
+        <img ...attributes>
+        <small>View Larger</small>
+    </div>
+{{/if}}
