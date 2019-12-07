@@ -1,3 +1,4 @@
+// file is used to configure the app and store API keys
 'use strict';
 
 module.exports = function(environment) {
@@ -46,6 +47,8 @@ module.exports = function(environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
   }
+
+  ENV.MAPBOX_ACCESS_TOKEN = 'pk.eyJ1IjoibGluZGFzYXJhZ3VybyIsImEiOiJjanI4OTBreWMwNDFhNDNsaDZ2OGJ0aGE3In0.ybegQ1ql9KBynbTJITDmQg';
 
   return ENV;
 };
