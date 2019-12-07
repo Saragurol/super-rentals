@@ -1,1 +1,9 @@
-{{yield}}
+<div class="map">
+    <img
+    alt="map image at coordinates {{@lat}}, {{@lng}}"
+    ...attributes
+    src={{this.src}}
+    width={{@width}} height={{@height}}
+    >
+    {{!-- img tag requests and renders the static map image from Mapbox  --}}
+</div>
