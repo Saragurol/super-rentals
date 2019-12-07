@@ -1,18 +1,16 @@
 {{!-- this is an example of a "namespaced" component. Allows me to organize my components by folders according to their purpose --}}
 
-{{!-- this can be invoked as <Rental::Image> --}}
+{{!-- this component can be invoked as <Rental::Image> --}}
 
-{{#if this.isLarge}}
-    <div class="image large">
-        <img ...attributes>
-            {{!-- the ...attributes keyword allows arbitrary HTML attributes to be passed in when invoking this component --}}
-
-        {{!-- adding ...attribute to the primary element allows for maximum flexibility --}}
+{{!-- expression version of {{if}} --}}
+<button type="button" class="image {{if this.isLarge "large"}}" {{on "click" this.toggleSize}}>
+    {{!-- the "{{on}}" modifier attaches the method this.toggleSize as a click handler on the button   --}}
+    <img ...attributes>
+    {{!-- the ...attributes keyword allows arbitrary HTML attributes to be passed in when invoking this component --}}
+    {{#if this.isLarge}}
         <small>View Smaller</small>
-    </div>
-{{else}}
-    <div class="image">
-        <img ...attributes>
+    {{else}}
         <small>View Larger</small>
-    </div>
-{{/if}}
+    {{/if}}
+</button>
+  

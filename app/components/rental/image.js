@@ -17,6 +17,9 @@ export default class RentalImageComponent extends Component {
   // In this case, whenever we assign a new value to this.isLarge, the @tracked annotation will cause Ember to re-evaluate the {{#if this.isLarge}} conditional in our template, and will switch between the two blocks accordingly.
 
   @action toggleSize() {
+    // toggleSize method switches this.isLarge to the opposite of its current state 
+
+    // @action decorator indicates to Ember that I plan to use this method from the image template. Without "@action", the method will not function properly as a callback function (click handler)
     this.isLarge = !this.isLarge;
   }
 }
