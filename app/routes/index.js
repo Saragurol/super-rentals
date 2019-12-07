@@ -12,9 +12,11 @@ export default class IndexRoute extends Route {
         let response = await fetch('/api/rentals.json');
         // the Browser's fetch API requests the JSON data from our server's API at "public/api/rentals.json"
         let {data} = await response.json();
+        // parsing JSON data 
 
         return data.map(model => {
             let { attributes } = model;
+            // extracting the nested attributes object
             let type;
 
             if(COMMUNITY_CATEGORIES.includes(attributes.category)){
@@ -24,6 +26,7 @@ export default class IndexRoute extends Route {
             }
 
             return { type, ...attributes }
+            // added back the missing type attribute
         })
     }
 }

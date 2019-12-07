@@ -9,10 +9,11 @@
 
 <div class="rentals">
     <ul class="results">
-        <li><Rental @rental={{@model}} /></li>
-        {{!-- passing the @model into the Rental component as the @rental argument --}}
-        <li><Rental @rental={{@model}} /></li>
-        <li><Rental @rental={{@model}} /></li>
+        {{#each @model as |rental|}}
+        <li><Rental @rental={{rental}}/></li>
+        {{!-- for each item in the array- we will render the Rental component that is passed to it once. --}}
+        {{!-- Passing the rental variable as an argument to the Rental component  --}}
+        {{/each}}
+        {{!-- {{#each}}...{{/each}} syntax iterates and loops through the array returned by the model hook --}}
     </ul>
-
 </div>
