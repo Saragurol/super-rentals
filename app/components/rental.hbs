@@ -2,7 +2,12 @@
     <Rental::Image src={{@rental.image}} alt= "A picture of {{@rental.title}}" />
     {{!-- specified a src and alt HTML attribute here, which will be passed along to the component and attached to the element where ...attributes is applied in the component template --}}
   <div class="details">
-    <h3>{{@rental.title}}</h3>
+    <h3>
+      <LinkTo @route="rental" @model={{@rental}}>
+      {{!-- connecting to the rental route. This route requires a dynamic segment. Passing in @model arg so LinkTo component can generate the appropriate URL for that model  --}}
+        {{@rental.title}}
+      </LinkTo>
+    </h3>
     <div class="detail owner">
       <span>Owner:</span> {{@rental.owner}}
     </div>
