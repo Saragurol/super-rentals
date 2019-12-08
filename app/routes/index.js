@@ -15,7 +15,7 @@ export default class IndexRoute extends Route {
         // parsing JSON data 
 
         return data.map(model => {
-            let { attributes } = model;
+            let { attributes, id } = model;
             // extracting the nested attributes object
             let type;
 
@@ -25,7 +25,7 @@ export default class IndexRoute extends Route {
                 type="Standalone";
             }
 
-            return { type, ...attributes }
+            return { id, type, ...attributes };
             // added back the missing type attribute
         })
     }
