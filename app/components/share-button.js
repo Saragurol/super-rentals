@@ -7,6 +7,8 @@ export default class ShareButtonComponent extends Component {
     @service router;
     // injects the router service into the component. avail as this.router
 
+    // replaces Ember's router service with a different object at runtime
+    
     get currentURL() {
         return new URL(this.router.currentURL, window.location.origin);
       }
