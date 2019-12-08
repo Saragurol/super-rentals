@@ -8,7 +8,6 @@ const COMMUNITY_CATEGORIES = [
 
 export default class RentalRoute extends Route {
   async model(params) {
-      // "params" object passes rental_id to the model hook
     let response = await fetch(`/api/rentals/${params.rental_id}.json`);
     let { data } = await response.json();
 
@@ -24,3 +23,4 @@ export default class RentalRoute extends Route {
     return { id, type, ...attributes };
   }
 }
+ // "params" object passes rental_id to the model hook
