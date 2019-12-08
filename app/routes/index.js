@@ -6,6 +6,8 @@ export default class IndexRoute extends Route {
 
   async model() {
     return this.store.findAll('rental');
+    // findAll takes 1 arg (model type)
+    // findAll fetches all records of that type from the store 
   }
 }
 
