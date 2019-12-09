@@ -1,7 +1,8 @@
 <div class="rentals">
   <label>
     <span>Where would you like to stay?</span>
-    <input class="light">
+    <Input @value={{this.query}} class="light"/>
+    {{!-- Ember's <Input> component will wire up things behind the scenes such that, whenever the user types something into the input box, this.query changes accordingly --}}
   </label>
 
   <ul class="results">
