@@ -1,0 +1,15 @@
+<div class="rentals">
+  <label>
+    <span>Where would you like to stay?</span>
+    <input class="light">
+  </label>
+
+  <ul class="results">
+    {{#each @rentals as |rental|}}
+      <li><Rental @rental={{rental}} /></li>
+      {{!-- for each item in the array- we will render the Rental component that is passed to it once. --}}
+        {{!-- Passing the rental variable as an argument to the Rental component  --}}
+    {{/each}}
+    {{!-- {{#each}}...{{/each}} syntax iterates and loops through the array returned by the model hook --}}
+  </ul>
+</div>
